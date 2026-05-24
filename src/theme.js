@@ -1,12 +1,19 @@
 export const theme = {
-    token: {
-        colorPrimary: "#e53935",
+  token: {
+    colorPrimary: "blue",
+  },
+  components: {
+    Button: {
+      borderRadius: 7,
+      borderRadiusLG: 7,
+      borderRadiusSM: 7,
     },
-    components: {
-        Button: {
-            borderRadius: 0,
-            borderRadiusLG: 0,
-            borderRadiusSM: 0,
-        },
+    Table: {
+      headerBg: "#092947",
+      headerColor: "white",
+      cellPaddingBlock: 8,
+      cellPaddingInline: 12,
+      rowHoverBg: "#e8e8e8",
     },
+  },
 };
