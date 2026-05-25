@@ -30,7 +30,7 @@ function AppLayout() {
                     My App
                 </div>
             </Header>
-            <Layout>
+            <Layout >
                 <Sider width={220} breakpoint="lg" collapsedWidth="0">
                     <Menu
                         mode="inline"
