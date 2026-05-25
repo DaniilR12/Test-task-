@@ -37,6 +37,7 @@ function AppLayout() {
                         selectedKeys={[pathname]}
                         items={menuItems}
                         style={{ height: "100%", borderRight: 0 }}
+                        inlineIndent={18}
                     />
                 </Sider>
                 <Layout style={{ padding: 24 }}>

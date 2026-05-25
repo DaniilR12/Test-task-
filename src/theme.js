@@ -9,11 +9,16 @@ export const theme = {
       borderRadiusSM: 7,
     },
     Table: {
-      headerBg: "#092947",
+      headerBg: "#606f7d",
       headerColor: "white",
       cellPaddingBlock: 8,
       cellPaddingInline: 12,
       rowHoverBg: "#e8e8e8",
+      headerSortHoverBg: "#455e75",
+      headerSortActiveBg: "#455e75",
+    },
+    Menu: {
+      itemHeight: 44,
     },
   },
 };
