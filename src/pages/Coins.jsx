@@ -1,5 +1,5 @@
-import { TableComponent } from "../components/TableComponent";
 import { useCoins } from "../hooks/useCoins";
+import { TableComponent } from "../components/TableComponent";
 
 
 function Coins() {

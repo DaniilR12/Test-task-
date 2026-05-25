@@ -1,6 +1,7 @@
-import { TableComponent } from "../components/TableComponent";
-import { useCoins } from "../hooks/useCoins";
 import { useState } from "react";
+
+import { useCoins } from "../hooks/useCoins";
+import { TableComponent } from "../components/TableComponent";
 
 export function CoinsPaged() {
     const [page, setPage] = useState(1)
