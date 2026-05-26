@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
 const fetchCoinChart = async ({ queryKey }) => {
+  const API_URL = import.meta.env.VITE_API_URL;
   const [, coinId] = queryKey;
 
   const response = await fetch(
-    `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=usd&days=7`,
+    `${API_URL}/coins/${coinId}/market_chart?vs_currency=usd&days=7`,
   );
 
   if (!response.ok) {

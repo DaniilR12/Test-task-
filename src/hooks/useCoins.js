@@ -1,8 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
-const fetchCoins = async ({ perPage = 50, page = 1 }) => {
+const fetchCoins = async ({ queryKey }) => {
+  const API_URL = import.meta.env.VITE_API_URL;
+  const [, { perPage, page }] = queryKey;
+
   const response = await fetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=${perPage}&page=${page}`,
+    `${API_URL}/coins/markets?vs_currency=usd&per_page=${perPage}&page=${page}`,
   );
 
   if (!response.ok) {
@@ -12,9 +15,9 @@ const fetchCoins = async ({ perPage = 50, page = 1 }) => {
   return response.json();
 };
 
-export function useCoins() {
+export function useCoins(perPage = 50, page = 1) {
   return useQuery({
-    queryKey: ["coins"],
+    queryKey: ["coins", { perPage, page }],
     queryFn: fetchCoins,
   });
 }

@@ -1,4 +1,4 @@
-import { Card, Table, Tooltip, Typography } from "antd";
+import { Table, Tooltip, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export function TableComponent({ data, pagination, loading, error }) {
@@ -87,10 +87,11 @@ export function TableComponent({ data, pagination, loading, error }) {
 
     if (error) {
         return (
-            <Card>
+            <>
                 <Title level={2}>Error loading data</Title>
                 <Paragraph>{error.message}</Paragraph>
-            </Card>
+            </>
+
         )
     }
 
